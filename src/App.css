@@ -1,0 +1,254 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.parent {
+  margin-top: 5%;
+}
+
+.results {
+  margin: auto;
+  width: 550px;
+  height: 230px;
+  margin-top: 25px;
+  overflow: wrap;
+}
+
+.thumb-parent {
+  display: inline-block;
+  position:relative; 
+  height:100px; 
+  width:100px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 10px; 
+  transition: 0.15s;
+  animation: animatezoom 0.2s;
+}
+
+.thumb-parent:hover {
+  transform: scale(1.075);
+}
+
+.thumb-frame-2 {
+  position: absolute;
+  background: url('./img/thumb_frame_silver.png');
+  background-size: cover;
+  width: 100px;
+  height: 100px;
+  top: 0;
+  left: 0;
+}
+
+.thumb-frame-3 {
+  position: absolute;
+  background: url('./img/thumb_frame_gold.png');
+  background-size: cover;
+  width: 100px;
+  height: 100px;
+  top: 0;
+  left: 0;
+}
+
+.thumb-frame-4 {
+  position: absolute;
+  background: url('./img/thumb_frame_rainbow.png');
+  background-size: cover;
+  width: 100px;
+  height: 100px;
+  top: 0;
+  left: 0;
+}
+
+.thumb-band-1 {
+  position: absolute;
+  top: 1.5%;
+  left: 2%;
+  width: 25px;
+  height: 25px;
+  background: url('./img/band_icon_1.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.thumb-band-2 {
+  position: absolute;
+  top: 1.5%;
+  left: 2%;
+  width: 25px;
+  height: 25px;
+  background: url('./img/band_icon_2.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.thumb-band-3 {
+  position: absolute;
+  top: 1.5%;
+  left: 2%;
+  width: 25px;
+  height: 25px;
+  background: url('./img/band_icon_3.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.thumb-band-4 {
+  position: absolute;
+  top: 1.5%;
+  left: 2%;
+  width: 25px;
+  height: 25px;
+  background: url('./img/band_icon_4.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.thumb-band-5 {
+  position: absolute;
+  top: 1.5%;
+  left: 2%;
+  width: 25px;
+  height: 25px;
+  background: url('./img/band_icon_5.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.thumb-attr-pure {
+  position: absolute;
+  top: 1.5%;
+  right: 1%;
+  width: 25px;
+  height: 25px;
+  background: url('./img/icon_pure.png');
+  background-size: cover;
+}
+
+.thumb-attr-cool {
+  position: absolute;
+  top: 1.5%;
+  right: 1%;
+  width: 25px;
+  height: 25px;
+  background: url('./img/icon_cool.png');
+  background-size: cover;  
+}
+
+.thumb-attr-powerful {
+  position: absolute;
+  top: 1.5%;
+  right: 1%;
+  width: 25px;
+  height: 25px;
+  background: url('./img/icon_powerful.png');
+  background-size: cover;  
+}
+
+.thumb-attr-happy {
+  position: absolute;
+  top: 1.5%;
+  right: 1%;
+  width: 25px;
+  height: 25px;
+  background: url('./img/icon_happy.png');
+  background-size: cover;  
+}
+
+.thumb-rarity-0-1 {
+  position: absolute;
+  top: 80%;
+  left: 2.5%;
+  width: 18.75px;
+  height: 18.75px;
+  background: url('./img/star_untrained.png');
+  background-size: contain;
+}
+
+.thumb-rarity-0-2 {
+  position: absolute;
+  top: 65%;
+  left: 2.5%;
+  width: 18.75px;
+  height: 18.75px;
+  background: url('./img/star_untrained.png');
+  background-size: contain;
+}
+
+.thumb-rarity-0-3 {
+  position: absolute;
+  top: 50%;
+  left: 2.5%;
+  width: 18.75px;
+  height: 18.75px;
+  background: url('./img/star_untrained.png');
+  background-size: contain;
+}
+
+.thumb-rarity-0-4 {
+  position: absolute;
+  top: 35%;
+  left: 2.5%;
+  width: 18.75px;
+  height: 18.75px;
+  background: url('./img/star_untrained.png');
+  background-size: contain;
+}
+
+.rollbutton {
+  margin: 3px 3px 3px 3px;
+  background-color: #FF3377;
+  color: #ffffff;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.rollbutton:hover {
+  background-color: #f03070;
+  color: #ffffff;
+}
+
+.gachalist {
+  margin: 10px 3px 10px 3px;
+  background-color: #eeeeee;
+  width: 290px;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.gachalist:hover {
+  background-color: #f3f3f3;
+}
