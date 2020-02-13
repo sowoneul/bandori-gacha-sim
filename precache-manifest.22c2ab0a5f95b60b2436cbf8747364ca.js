@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "28153192e3dcf37e8486b03543387e63",
+    "revision": "9ec4a514fbdb3894a8f1fd810af7f052",
     "url": "/bandori-gacha-sim/index.html"
   },
   {
