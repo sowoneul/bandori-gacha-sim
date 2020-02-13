@@ -38,15 +38,89 @@
 }
 
 .parent {
-  margin-top: 5%;
+  margin-top: 3%;
 }
 
 .results {
   margin: auto;
-  width: 550px;
-  height: 230px;
+  width: 575px;
+  height: 235px;
   margin-top: 25px;
+  margin-bottom: 25px;
+  padding-top: 12px;
   overflow: wrap;
+  background-color: #262626;
+  border-radius: 3px;
+  border: 1px solid #101010;
+}
+
+.rollbutton {
+  margin: 3px 3px 8px 3px;
+  background-color: #FF3377;
+  color: #ffffff;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.rollbutton:hover {
+  background-color: #f03070;
+  color: #ffffff;
+}
+
+.gachalist {
+  margin: 0px 3px 10px 3px;
+  background-color: #262626;
+  color: #dcdcdc;
+  width: 290px;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.gachalist:hover {
+  background-color: #191919;
+  color: #dcdcdc;
+}
+
+.dreamfes {
+  margin-bottom: 7px;
+  margin-top: 3px;
+}
+
+.custom-control-label:hover {
+  cursor: pointer;
+}
+
+.custom-control-label::before {
+  background-color: #202020;
+  box-shadow: none !important;
+  outline: 0 none !important;
+  border-color: #191919 !important;
+}
+
+.custom-control-input:checked~.custom-control-label::before {
+  color: #fff;
+  border-top-color: #f03070;
+  border-right-color: #f03070;
+  border-bottom-color: #f03070;
+  border-left-color: #f03070;
+  background-color: #FF3377;
+  border-color: #2C2F33 !important;
+  box-shadow: none !important;
+  outline: 0 none !important;
+}
+
+.custom-control-input:not(:disabled):active~.custom-control-label::before {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  border-color: #2C2F33 !important;
+  box-shadow: none !important;
+  outline: 0 none !important;
+}
+
+.btn:focus,
+.btn:active
+{
+  border-color: 262626 !important;
+  box-shadow: none !important;
+  outline: 0 none !important;
 }
 
 .thumb-parent {
@@ -228,27 +302,4 @@
   height: 18.75px;
   background: url('./img/star_untrained.png');
   background-size: contain;
-}
-
-.rollbutton {
-  margin: 3px 3px 3px 3px;
-  background-color: #FF3377;
-  color: #ffffff;
-  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-}
-
-.rollbutton:hover {
-  background-color: #f03070;
-  color: #ffffff;
-}
-
-.gachalist {
-  margin: 10px 3px 10px 3px;
-  background-color: #eeeeee;
-  width: 290px;
-  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-}
-
-.gachalist:hover {
-  background-color: #f3f3f3;
 }

@@ -221,19 +221,13 @@ class App extends React.Component {
   
   render() {
     return (
-      <div className="App">
+      <div className={"App " + this.state.dark}>
         <div className='parent'>
           <h3>Total: {this.state.two + this.state.three + this.state.four} ({this.state.focus2 + this.state.focus3 + this.state.focus4})</h3>
-          <div>4☆: {this.state.four} ({this.state.focus4})  3☆: {this.state.three} ({this.state.focus3})  2☆: {this.state.two} ({this.state.focus2})</div>
-
+          <h5>4☆: {this.state.four} ({this.state.focus4})  3☆: {this.state.three} ({this.state.focus3})  2☆: {this.state.two} ({this.state.focus2})</h5>
+          <div>Total stars spent: {(this.state.two + this.state.three + this.state.four) * 250}
+            &#160;{this.state.whale}</div>
           <div className='results'>{this.state.q}</div>
-          
-          <div>
-            Total stars spent: {(this.state.two + this.state.three + this.state.four) * 250}
-            &#160;{this.state.whale}<br/>
-            Current 4☆ rate is {this.state.rate * 100}%
-          </div>
-
           <div>
             <select className='btn btn-sm gachalist' onChange={this.handleGacha}>
               {this.state.gachaList.map((gach) => 
@@ -241,10 +235,11 @@ class App extends React.Component {
                 )}
             </select>
           </div>
+          <div>Current 4☆ rate is {this.state.rate * 100}%</div>
           <div>
-            <div className="custom-control custom-checkbox">
+            <div className="custom-switch dreamfes">
                 <input type="checkbox" className="custom-control-input" id="defaultUnchecked" onClick={this.handleDF}/>
-                <label className="custom-control-label" for="defaultUnchecked">DreamFes</label>
+                <label className="custom-control-label unselectable" for="defaultUnchecked">DreamFes</label>
             </div>
           </div>
           <div>
