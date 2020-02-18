@@ -4,4 +4,5 @@ Contact:
 
 TODO:
 1. Allow spam click rolling
-2. Add suitable feedback/ideas
+2. Better mobile support
+3. Add suitable feedback/ideas
