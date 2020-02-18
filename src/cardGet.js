@@ -1,8 +1,7 @@
-let region = 'en';
-let url = 'https://api.bandori.ga/v1/' + region + '/';
-let resurl = 'https://res.bandori.ga/assets-' + region + '/thumb/chara/card'
+export async function getFromGacha(rar, focus=false, gach, region='en') {
+	let url = 'https://api.bandori.ga/v1/' + region + '/';
+	let resurl = 'https://res.bandori.ga/assets-' + region + '/thumb/chara/card'
 
-export async function getFromGacha(rar, focus=false, gach) {
 	let response = await fetch(url + 'gacha/' + gach.toString());
 	let gachData = await response.json();
 
@@ -27,27 +26,3 @@ function cardGroup(id) {
 	const groupId = Math.trunc(id / 50).toString()
     return '0'.repeat(5 - groupId.length) + groupId;
 }
-
-// export async function get(rng, rar) {
-// 	let response = await fetch(url + 'card/');
-// 	let cardData = await response.json();
-
-// 	let cardList = cardData.data.filter(function (card) {
-// 		if (rar >= 3) {
-// 			return card.rarity === rar && card.hasOwnProperty('gachaText');
-// 		} else {
-// 			return card.rarity === rar;
-// 		}
-		
-// 	});
-// 	// console.log(cardList.length)
-// 	let id = Math.floor(rng * cardList.length);
-// 	// console.log(id)
-// 	let card = cardList[id];
-// 	console.log(card.cardId);
-
-// 	let imgurl = resurl + cardGroup(card.cardId) + '_rip/' + card.cardRes + '_normal.png';
-// 	// let charname = charList[card.characterId - 1].characterName;
-
-// 	return [imgurl];
-// }

@@ -41,12 +41,29 @@
   margin-top: 3%;
 }
 
+.stats {
+  width: 550px;
+}
+
+.total {
+  font-size: 1.6em;
+  text-align: left;
+  padding-left: 75px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.individual {
+  font-size: 1.25em;
+  text-align: left;
+}
+
 .results {
   margin: auto;
   width: 575px;
   height: 235px;
-  margin-top: 25px;
-  margin-bottom: 25px;
+  margin-top: 15px;
+  margin-bottom: 17.5px;
   padding-top: 12px;
   overflow: wrap;
   background-color: #262626;
@@ -55,7 +72,7 @@
 }
 
 .rollbutton {
-  margin: 3px 3px 8px 3px;
+  margin: 3px 6px 3px 0px;
   background-color: #FF3377;
   color: #ffffff;
   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
@@ -66,11 +83,29 @@
   color: #ffffff;
 }
 
+.gacha {
+  width: 660px;
+  margin-bottom: 10px;
+  height: 100px;
+}
+
+.gachabanner {
+  padding-right: 0px;
+  right: -27.5px; 
+}
+
+.gachaoptions {
+  right: -27.5px;
+  top: 2px;
+  font-size: .75em;
+  text-align: left;
+}
+
 .gachalist {
-  margin: 0px 3px 10px 3px;
+  margin: 0px 3px 2px -2px;
   background-color: #262626;
   color: #dcdcdc;
-  width: 290px;
+  width: 250px;
   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
