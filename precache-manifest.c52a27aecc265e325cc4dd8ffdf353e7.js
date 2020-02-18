@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d32a5c33e383117ae95cc28193df1ac5",
+    "revision": "2e1063cf0febb9341691107eaae83036",
     "url": "/bandori-gacha-sim/index.html"
   },
   {
-    "revision": "d08b697beb68a3e921c9",
-    "url": "/bandori-gacha-sim/static/css/main.df565d39.chunk.css"
+    "revision": "d223b628f0efa1e62fd5",
+    "url": "/bandori-gacha-sim/static/css/main.1cba3b1f.chunk.css"
   },
   {
     "revision": "c9fab18566bca7d10252",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/bandori-gacha-sim/static/js/2.17e5485b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d08b697beb68a3e921c9",
-    "url": "/bandori-gacha-sim/static/js/main.f4a250d4.chunk.js"
+    "revision": "d223b628f0efa1e62fd5",
+    "url": "/bandori-gacha-sim/static/js/main.f6566e42.chunk.js"
   },
   {
     "revision": "e2aa6a067ed1c10d8918",
