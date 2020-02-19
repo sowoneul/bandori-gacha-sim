@@ -37,6 +37,34 @@
   }
 }
 
+@media (max-width: 600px) {
+  html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+  .parent {
+    margin-left: -25%;
+  }
+  .results {
+    transform: scale(.55);
+    margin-top: -50px !important;
+    margin-bottom: -50px !important;
+  }   
+  .stats {
+    transform: scale(.55);
+  }
+  .gacha {
+    transform: scale(.55);
+  }
+  .gachaoptions{
+    width: 50px;
+  }
+  .controls {
+    display: inline-block;
+  }
+}
+
 .parent {
   margin-top: 3%;
 }
@@ -84,21 +112,22 @@
 }
 
 .gacha {
-  width: 660px;
+  width: 600px;
   margin-bottom: 10px;
   height: 100px;
+  overflow: visible;
 }
 
 .gachabanner {
   padding-right: 0px;
-  right: -27.5px; 
 }
 
 .gachaoptions {
-  right: -27.5px;
+  right: -5px;
   top: 2px;
   font-size: .75em;
   text-align: left;
+  width: 50px;
 }
 
 .gachalist {

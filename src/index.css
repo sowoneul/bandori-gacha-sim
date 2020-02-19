@@ -15,7 +15,7 @@ code {
 }
 
 #credits {
-  position: absolute;
+  position: fixed;
   bottom: 3px;
   right: 5px;
   font-size: 0.75em;

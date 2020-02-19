@@ -1,14 +1,15 @@
 import React from 'react';
+import Card from './Card';
+import {getFromGacha} from './cardGet';
+import './App.css';
 import whale from './img/whale.gif'
 import tsugu from './img/tsugunomoney.gif'
 import tsugumoney from './img/tsugumoney.gif'
-import './App.css';
-import {getFromGacha} from './cardGet';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.initialState = {
+    this.state = {
       rate: 0.03,
       two: 0,
       three: 0,
@@ -18,15 +19,14 @@ class App extends React.Component {
       focus3: 0,
       focus2: 0,
       q: [],
-      whale: '',
-      tsugu: tsugu,
+      region: 'en',
       gachaList: [{display: 'Loading Gacha List...'}],
       selectedGacha: 5,
       focusAmount: [0, 0, 0],
-      region: 'en',
-      gachaimg: ''
+      gachaimg: '',
+      whale: '',
+      tsugu: tsugu
     }
-    this.state = this.initialState
   }
 
   componentDidMount = () => {
@@ -184,70 +184,29 @@ class App extends React.Component {
   }
 
   handleReset = (e) => {
-    let df = this.state.rate;
-    let gachList = this.state.gachaList;
-    let selected = this.state.selectedGacha;
-    let focus = this.state.focusAmount;
-    let region = this.state.region;
-    let img = this.state.gachaimg;
-    this.setState(state => {
-      return this.initialState;
-    });
     this.setState({
+      two: 0,
+      three: 0,
+      four: 0,
+      total: 0,
+      focus4: 0,
+      focus3: 0,
+      focus2: 0,
       q: [],
-      gachaList: gachList,
-      selectedGacha: selected,
-      focusAmount: focus,
-      region: region,
-      gachaimg: img
-    })
-    if (df === 0.06) {
-      this.setState(state => {return {rate: 0.06}});
-    }
+      whale: '',
+      tsugu: tsugu
+    });
   }
-
-  // spark = (e) => {
-  //   for (var i = 0; i < 30; i++) {
-  //     this.handleRollTen();
-  //   }
-  //   this.setState(state => {return {rng: 'Sparked!'}});
-  // }
 
   getCard = (rarity, focus) => {
     var queue = this.state.q;
-    var stars = <div></div>;
-
-    if (rarity === 4) {
-      stars = <div><div className='thumb-rarity-0-1'> </div>
-            <div className='thumb-rarity-0-2'> </div>
-            <div className='thumb-rarity-0-3'> </div>
-            <div className='thumb-rarity-0-4'> </div></div>;
-    } else if (rarity === 3) {
-      stars = <div><div className='thumb-rarity-0-1'> </div>
-            <div className='thumb-rarity-0-2'> </div>
-            <div className='thumb-rarity-0-3'> </div></div>;
-    } else if (rarity === 2) {
-      stars = <div><div className='thumb-rarity-0-1'> </div>
-            <div className='thumb-rarity-0-2'> </div></div>;
-    } else {
-      stars = <div></div>;
-    }
 
     getFromGacha(rarity, focus, this.state.selectedGacha, this.state.region)
       .then(url => {
         if (queue.length === 10) {queue.shift()};
         queue.push(
-          <a href={'https://bestdori.com/info/cards/' + url[4]} target='_blank' rel="noopener noreferrer">
-            <div className='thumb-parent' title={url[3]}>
-              <img src={url[0]} height='100' width='100' alt=''/>
-              <div className={'thumb-frame-' + rarity.toString()}> </div>
-              <div className={'thumb-attr-' + url[1]}> </div>
-              <div className={'thumb-band-' + url[2]}> </div>
-              {stars}
-            </div>
-          </a>
+          <Card image={url[0]} id={url[4]} name={url[3]} rarity={rarity} attr={url[1]} band={url[2]} />
           );
-
         this.setState({
           q:queue
         })
@@ -256,7 +215,7 @@ class App extends React.Component {
   }
 
   handleHoverIn = (e) => {
-    if (this.state.total != 0) {
+    if (this.state.total !== 0) {
       this.setState(state => {return {
         two: state.two / state.total,
         three: state.three / state.total,
@@ -278,17 +237,16 @@ class App extends React.Component {
     return (
       <div className={"App " + this.state.dark}>
         <div className='parent'>
-
-          <div class='container stats'>
-            <div class='row'>
-              <div class='col-1'>
+          <div className='container stats'>
+            <div className='row'>
+              <div className='col-1'>
                 <img src={this.state.tsugu} alt='' height={'75px'} />
               </div>
-              <div class='col-8 total'>
+              <div className='col-8 total'>
                 <div>Total: {this.state.total} ({this.state.focus2 + this.state.focus3 + this.state.focus4})</div>
                 <div>Stars spent: {(this.state.total) * 250}&#160;{this.state.whale}</div>
               </div>
-              <div class='individual' onMouseEnter={this.handleHoverIn} onMouseLeave={this.handleHoverOut}>
+              <div className='individual' onMouseEnter={this.handleHoverIn} onMouseLeave={this.handleHoverOut}>
                 <div>4☆: {Math.round(this.state.four * 100) / 100} ({this.state.focus4})</div>
                 <div>3☆: {Math.round(this.state.three * 100) / 100} ({this.state.focus3})</div>
                 <div>2☆: {Math.round(this.state.two * 100) / 100} ({this.state.focus2})</div>
@@ -298,14 +256,14 @@ class App extends React.Component {
 
           <div className='results'>{this.state.q}</div>
 
-          <div class='container gacha'>
-            <div class='row'>
-              <div class='col gachabanner'>
+          <div className='container gacha'>
+            <div className='row'>
+              <div className='col gachabanner'>
                 <a href={'https://bestdori.com/info/gacha/' + this.state.selectedGacha} target='_blank' rel="noopener noreferrer">
                   <img src={this.state.gachaimg} alt='' height='100px' />
                 </a>
               </div>
-              <div class='col gachaoptions'>
+              <div className='col gachaoptions'>
                 Gacha:<br/>
                 <select className='btn btn-sm gachalist' onChange={this.handleGacha}>
                   {this.state.gachaList.map((gach) => 
@@ -321,18 +279,15 @@ class App extends React.Component {
             </div>
           </div>
 
-          <div className="custom-switch dreamfes">
+          <div className='controls'>
+            <div className="custom-switch dreamfes">
               <input type="checkbox" className="custom-control-input" id="defaultUnchecked" onClick={this.handleDF}/>
               <label className="custom-control-label unselectable" htmlFor="defaultUnchecked">DreamFes</label>
-          </div>
-
-          <div>
+            </div>
             <button className='btn rollbutton' onClick={this.handleRoll}> Roll </button>
             <button className='btn rollbutton' onClick={this.handleRollTen}> Roll 10 </button>
-            {/*<button onClick={this.spark}> Spark! </button><br/>*/}
             <button className='btn btn-secondary' onClick={this.handleReset}> Reset </button>
           </div>
-
         </div>
       </div>
     );
@@ -340,3 +295,13 @@ class App extends React.Component {
 }
 
 export default App;
+
+
+// Old Code used in development
+/*<button onClick={this.spark}> Spark! </button><br/>*/
+// spark = (e) => {
+//   for (var i = 0; i < 30; i++) {
+//     this.handleRollTen();
+//   }
+//   this.setState(state => {return {rng: 'Sparked!'}});
+// }
