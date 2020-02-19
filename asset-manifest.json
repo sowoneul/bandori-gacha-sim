@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/bandori-gacha-sim/static/css/main.ae91d4ba.chunk.css",
-    "main.js": "/bandori-gacha-sim/static/js/main.b80b4c35.chunk.js",
-    "main.js.map": "/bandori-gacha-sim/static/js/main.b80b4c35.chunk.js.map",
+    "main.js": "/bandori-gacha-sim/static/js/main.5ea902c7.chunk.js",
+    "main.js.map": "/bandori-gacha-sim/static/js/main.5ea902c7.chunk.js.map",
     "runtime-main.js": "/bandori-gacha-sim/static/js/runtime-main.30dd1ea4.js",
     "runtime-main.js.map": "/bandori-gacha-sim/static/js/runtime-main.30dd1ea4.js.map",
-    "static/js/2.7c5a2533.chunk.js": "/bandori-gacha-sim/static/js/2.7c5a2533.chunk.js",
-    "static/js/2.7c5a2533.chunk.js.map": "/bandori-gacha-sim/static/js/2.7c5a2533.chunk.js.map",
+    "static/js/2.1f7897e9.chunk.js": "/bandori-gacha-sim/static/js/2.1f7897e9.chunk.js",
+    "static/js/2.1f7897e9.chunk.js.map": "/bandori-gacha-sim/static/js/2.1f7897e9.chunk.js.map",
     "index.html": "/bandori-gacha-sim/index.html",
-    "precache-manifest.76dc24e1571f2b6d96a1fd7b9f9a576f.js": "/bandori-gacha-sim/precache-manifest.76dc24e1571f2b6d96a1fd7b9f9a576f.js",
+    "precache-manifest.3d353b778c720e10ff8662a43b294247.js": "/bandori-gacha-sim/precache-manifest.3d353b778c720e10ff8662a43b294247.js",
     "service-worker.js": "/bandori-gacha-sim/service-worker.js",
     "static/css/main.ae91d4ba.chunk.css.map": "/bandori-gacha-sim/static/css/main.ae91d4ba.chunk.css.map",
-    "static/js/2.7c5a2533.chunk.js.LICENSE.txt": "/bandori-gacha-sim/static/js/2.7c5a2533.chunk.js.LICENSE.txt",
+    "static/js/2.1f7897e9.chunk.js.LICENSE.txt": "/bandori-gacha-sim/static/js/2.1f7897e9.chunk.js.LICENSE.txt",
     "static/media/tsugumoney.gif": "/bandori-gacha-sim/static/media/tsugumoney.0eee08a4.gif",
     "static/media/tsugunomoney.gif": "/bandori-gacha-sim/static/media/tsugunomoney.a698363a.gif",
     "static/media/whale.gif": "/bandori-gacha-sim/static/media/whale.17edc0ad.gif"
   },
   "entrypoints": [
     "static/js/runtime-main.30dd1ea4.js",
-    "static/js/2.7c5a2533.chunk.js",
+    "static/js/2.1f7897e9.chunk.js",
     "static/css/main.ae91d4ba.chunk.css",
-    "static/js/main.b80b4c35.chunk.js"
+    "static/js/main.5ea902c7.chunk.js"
   ]
 }

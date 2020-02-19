@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/bandori-gacha-sim/precache-manifest.76dc24e1571f2b6d96a1fd7b9f9a576f.js"
+  "/bandori-gacha-sim/precache-manifest.3d353b778c720e10ff8662a43b294247.js"
 );
 
 self.addEventListener('message', (event) => {
