@@ -4,6 +4,7 @@ import './App.css';
 class Card extends React.Component {
 	constructor(props) {
 		super(props)
+		// determine how many stars to display on card thumbnail
 		var stars;
     if (this.props.rarity === 4) {
       stars = <div><div className='thumb-rarity-0-1'> </div>

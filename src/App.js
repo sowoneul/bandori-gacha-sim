@@ -34,17 +34,20 @@ class App extends React.Component {
   }
 
   handleRegion = (e) => {
+    // change between server regions
     this.handleReset();
     this.setState({region: e.target.value});
     this.getGachaList(e.target.value);
   }
 
   getGachaList = (region) => {
+    // build gacha dropdown list
     fetch('https://api.bandori.ga/v1/' + region + '/gacha')
       .then((response) => {
         return response.json();
       })
       .then(resp => {
+        // filter out special gachas
         let list = resp.data.filter(gach => {
           if (gach.gachaName.includes('★') || gach.gachaName.includes('Type') || 
             gach.gachaName.includes('Step Up') ||  gach.gachaName.includes('タイプ') ||
@@ -55,7 +58,8 @@ class App extends React.Component {
           return true;
         });
 
-        let gacha = list.slice(0).reverse().map(gach => {
+        // find # of focus cards in each gacha, add ID tag, convert to new object
+        let gacha = list.slice(0).reverse().map(gach => {          
           let two = 0;
           let three = 0;
           let four = 0;
@@ -79,6 +83,7 @@ class App extends React.Component {
           return {value: gach.gachaId, display: disp, focus: [two, three, four]}
         });
         
+        // store newly created gacha database in state
         this.setState({
           gachaList: gacha,
           selectedGacha: gacha[0].value,
@@ -91,6 +96,7 @@ class App extends React.Component {
   }
 
   handleGacha = (e) => {
+    // switch current gacha banner
     let gachId = parseInt(e.target.value.slice(6));
     this.setState({
       selectedGacha: gachId, 
@@ -104,29 +110,27 @@ class App extends React.Component {
     var res = '';
 
     if (random <= this.state.rate) {
-      if (this.focusRoll(4, random)) {this.getCard(4, true);}
-      else {this.getCard(4);}
+      this.getCard(4, this.focusRoll(4, random));
       res = '4'
       this.setState(state => {return {four: state.four + 1, total: state.total + 1}});
     } else if (random > this.state.rate && random <= this.state.rate + 0.085) {
-      if (this.focusRoll(3, random)) {this.getCard(3, true);}
-      else {this.getCard(3)};
+      this.getCard(3, this.focusRoll(3, random));
       res = '3'
       this.setState(state => {return {three: state.three + 1, total: state.total + 1}});
     } else {
-      if (this.focusRoll(2, random)) {this.getCard(2, true);}
-      else {this.getCard(2);}
+      this.getCard(2, this.focusRoll(2, random));
       res = '2';
       this.setState(state => {return {two: state.two + 1, total: state.total + 1}});
     }
 
+    // easter eggs
     if (this.state.total === 9) {
       this.setState({tsugu: tsugumoney});
     }
-
     if (this.state.total === 100) {
       this.setState({whale: <img src={whale} width='20px' height='20px' alt=''/>});
     }
+
     return res;
   }
 
@@ -136,27 +140,28 @@ class App extends React.Component {
   }
 
   rollTen = () => {
+    // calls the roll function 10 times
     var res = '';
     for (var i = 0; i < 9; i++) {
       res = res + ' ' + this.handleRoll();
     }
 
+    // if there was already a 3*, there is no need to give a guaranteed 3*
     if (res.includes('3') || res.includes('4')) {res = this.handleRoll() + res;} 
     else {
       var random = Math.random();    
       if (random <= this.state.rate) {
-        if (this.focusRoll(4, random)) {this.getCard(4, true);} 
-        else {this.getCard(4);}
+        this.getCard(4, this.focusRoll(4, random));
         this.setState(state => {return {four: state.four + 1, total: state.total + 1}});
       } else {
-        if (this.focusRoll(3, random, 0.13695)) {this.getCard(3, true);}
-        else {this.getCard(3);}
+        this.getCard(3, this.focusRoll(3, random, 0.13695));
         this.setState(state => {return {three: state.three + 1, total: state.total + 1}});
       }
     }
   }
 
   focusRoll = (n, r, m = 0.012) => {
+    // handle case where a focus card is rolled
     // n: rarity, r = rng, m = focus rate for 3* (primarily for guaranteed 3* roll)
     var rate = 0;
     var focus = 'focus' + n.toString();
@@ -178,12 +183,14 @@ class App extends React.Component {
   }
 
   handleDF = (e) => {
+    // double rates for dreamfes (user controlled)
     var checked = e.target.checked;
     if (checked) {this.setState(state => {return {rate: 0.06}});}
     else {this.setState(state => {return {rate: 0.03}});}
   }
 
   handleReset = (e) => {
+    // reset state
     this.setState({
       two: 0,
       three: 0,
@@ -199,6 +206,7 @@ class App extends React.Component {
   }
 
   getCard = (rarity, focus) => {
+    // main function for card getting 
     var queue = this.state.q;
 
     getFromGacha(rarity, focus, this.state.selectedGacha, this.state.region)
@@ -215,6 +223,7 @@ class App extends React.Component {
   }
 
   handleHoverIn = (e) => {
+    // show % rates of card rarities pulled
     if (this.state.total !== 0) {
       this.setState(state => {return {
         two: state.two / state.total,
