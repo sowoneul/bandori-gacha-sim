@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/bandori-gacha-sim/static/css/main.f6676b49.chunk.css",
-    "main.js": "/bandori-gacha-sim/static/js/main.f84dcfcc.chunk.js",
-    "main.js.map": "/bandori-gacha-sim/static/js/main.f84dcfcc.chunk.js.map",
+    "main.css": "/bandori-gacha-sim/static/css/main.200eb97c.chunk.css",
+    "main.js": "/bandori-gacha-sim/static/js/main.31ab5aa8.chunk.js",
+    "main.js.map": "/bandori-gacha-sim/static/js/main.31ab5aa8.chunk.js.map",
     "runtime-main.js": "/bandori-gacha-sim/static/js/runtime-main.30dd1ea4.js",
     "runtime-main.js.map": "/bandori-gacha-sim/static/js/runtime-main.30dd1ea4.js.map",
     "static/js/2.1f7897e9.chunk.js": "/bandori-gacha-sim/static/js/2.1f7897e9.chunk.js",
     "static/js/2.1f7897e9.chunk.js.map": "/bandori-gacha-sim/static/js/2.1f7897e9.chunk.js.map",
     "index.html": "/bandori-gacha-sim/index.html",
-    "precache-manifest.aecf924bd2124de5713304bdfdde8fd0.js": "/bandori-gacha-sim/precache-manifest.aecf924bd2124de5713304bdfdde8fd0.js",
+    "precache-manifest.5bedbfcd7aae351b8ef1ef5efb6ccf17.js": "/bandori-gacha-sim/precache-manifest.5bedbfcd7aae351b8ef1ef5efb6ccf17.js",
     "service-worker.js": "/bandori-gacha-sim/service-worker.js",
-    "static/css/main.f6676b49.chunk.css.map": "/bandori-gacha-sim/static/css/main.f6676b49.chunk.css.map",
+    "static/css/main.200eb97c.chunk.css.map": "/bandori-gacha-sim/static/css/main.200eb97c.chunk.css.map",
     "static/js/2.1f7897e9.chunk.js.LICENSE.txt": "/bandori-gacha-sim/static/js/2.1f7897e9.chunk.js.LICENSE.txt",
     "static/media/tsugumoney.gif": "/bandori-gacha-sim/static/media/tsugumoney.0eee08a4.gif",
     "static/media/tsugunomoney.gif": "/bandori-gacha-sim/static/media/tsugunomoney.a698363a.gif",
@@ -19,7 +19,7 @@
   "entrypoints": [
     "static/js/runtime-main.30dd1ea4.js",
     "static/js/2.1f7897e9.chunk.js",
-    "static/css/main.f6676b49.chunk.css",
-    "static/js/main.f84dcfcc.chunk.js"
+    "static/css/main.200eb97c.chunk.css",
+    "static/js/main.31ab5aa8.chunk.js"
   ]
 }
