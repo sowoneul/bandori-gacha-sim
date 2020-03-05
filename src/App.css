@@ -37,31 +37,52 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   html, body {
     width: 100%;
     height: 100%;
     margin: 0;
   }
-  .parent {
-    margin-left: -25%;
-  }
   .results {
-    transform: scale(.55);
-    margin-top: -50px !important;
-    margin-bottom: -50px !important;
-  }   
+    width: 84vw !important;
+    height: 33vw !important;
+    padding-top: 1.5vw !important;
+  }
+  .thumb-parent {
+  }
   .stats {
-    transform: scale(.55);
+    width: 100% !important;
+  }
+  .total {
+    font-size: 1.25em !important;
+  }
+  .individual {
+    font-size: 1em !important;
   }
   .gacha {
-    transform: scale(.55);
+    width: 100% !important;
+    height: 195px !important;
   }
   .gachaoptions{
-    width: 50px;
+    text-align: center !important;
+    width: 100% !important;
   }
-  .controls {
-    display: inline-block;
+
+
+  .thumb-parent, .thumb-img, .thumb-frame-2, .thumb-frame-3, .thumb-frame-4 {
+    height: 13.5vw !important; 
+    width: 13.5vw !important;
+  }
+
+  .thumb-band-1, .thumb-band-2, .thumb-band-3, .thumb-band-4, .thumb-band-5,
+  .thumb-attr-pure, .thumb-attr-cool, .thumb-attr-powerful, .thumb-attr-happy {
+    width: 3.375vw !important;
+    height: 3.375vw !important;
+  }
+
+  .thumb-rarity-0-1, .thumb-rarity-0-2, .thumb-rarity-0-3, .thumb-rarity-0-4 {
+    width: 2.53vw !important;
+    height: 2.53vw !important;
   }
 }
 
@@ -75,15 +96,15 @@
 
 .total {
   font-size: 1.6em;
-  text-align: left;
-  padding-left: 75px;
+  text-align: center;
+  /*padding-left: 75px;*/
   margin-top: auto;
   margin-bottom: auto;
 }
 
 .individual {
   font-size: 1.25em;
-  text-align: left;
+  text-align: center;
 }
 
 .results {
@@ -119,11 +140,11 @@
 }
 
 .gachabanner {
-  padding-right: 0px;
+  /*padding-right: 0px;*/
 }
 
 .gachaoptions {
-  right: -5px;
+  right: 10px;
   top: 2px;
   font-size: .75em;
   text-align: left;
@@ -201,6 +222,11 @@
 
 .thumb-parent:hover {
   transform: scale(1.075);
+}
+
+.thumb-img {
+  height: 100px;
+  width: 100px;
 }
 
 .thumb-frame-2 {

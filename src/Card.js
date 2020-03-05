@@ -28,7 +28,7 @@ class Card extends React.Component {
 		return (
 			<a href={'https://bestdori.com/info/cards/' + this.props.id} target='_blank' rel="noopener noreferrer">
         <div className='thumb-parent' title={this.props.name}>
-          <img src={this.props.image} height='100' width='100' alt=''/>
+          <img src={this.props.image} className='thumb-img' alt=''/>
           <div className={'thumb-frame-' + this.props.rarity.toString()}> </div>
           <div className={'thumb-attr-' + this.props.attr}> </div>
           <div className={'thumb-band-' + this.props.band}> </div>

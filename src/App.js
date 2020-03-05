@@ -67,13 +67,13 @@ class App extends React.Component {
           let focus = gach.details.filter(card => {
             return card.pickup === true;
           })
-          for (var i = 0; i < focus.length; i++) {
+          for (let i = 0; i < focus.length; i++) {
             if (focus[i].rarityIndex === 2) {two++;}
             else if (focus[i].rarityIndex === 3) {three++;}
             else {four++;}
           }
 
-          var disp
+          let disp
           if (region === 'jp') {
             disp = gach.gachaId.toString() + ' - ' + gach.gachaName;
           } else {
@@ -106,8 +106,8 @@ class App extends React.Component {
   }
 
   handleRoll = (e) => {
-    var random = Math.random();
-    var res = '';
+    let random = Math.random();
+    let res = '';
 
     if (random <= this.state.rate) {
       this.getCard(4, this.focusRoll(4, random));
@@ -141,15 +141,15 @@ class App extends React.Component {
 
   rollTen = () => {
     // calls the roll function 10 times
-    var res = '';
-    for (var i = 0; i < 9; i++) {
+    let res = '';
+    for (let i = 0; i < 9; i++) {
       res = res + ' ' + this.handleRoll();
     }
 
     // if there was already a 3*, there is no need to give a guaranteed 3*
     if (res.includes('3') || res.includes('4')) {res = this.handleRoll() + res;} 
     else {
-      var random = Math.random();    
+      let random = Math.random();    
       if (random <= this.state.rate) {
         this.getCard(4, this.focusRoll(4, random));
         this.setState(state => {return {four: state.four + 1, total: state.total + 1}});
@@ -163,8 +163,8 @@ class App extends React.Component {
   focusRoll = (n, r, m = 0.012) => {
     // handle case where a focus card is rolled
     // n: rarity, r = rng, m = focus rate for 3* (primarily for guaranteed 3* roll)
-    var rate = 0;
-    var focus = 'focus' + n.toString();
+    let rate = 0;
+    let focus = 'focus' + n.toString();
 
     if (n === 4) {rate = 0.005 * this.state.focusAmount[2];} 
     else if (n === 3) {rate = (this.state.rate + m) * this.state.focusAmount[1];} 
@@ -172,7 +172,7 @@ class App extends React.Component {
 
     if (r <= rate) {
       this.setState(state => {
-        var x;
+        let x;
         if (n === 4) {x = state.focus4;}
         else if (n === 3) {x = state.focus3;}
         else {x = state.focus2;}
@@ -184,7 +184,7 @@ class App extends React.Component {
 
   handleDF = (e) => {
     // double rates for dreamfes (user controlled)
-    var checked = e.target.checked;
+    let checked = e.target.checked;
     if (checked) {this.setState(state => {return {rate: 0.06}});}
     else {this.setState(state => {return {rate: 0.03}});}
   }
@@ -207,7 +207,7 @@ class App extends React.Component {
 
   getCard = (rarity, focus) => {
     // main function for card getting 
-    var queue = this.state.q;
+    let queue = this.state.q;
 
     getFromGacha(rarity, focus, this.state.selectedGacha, this.state.region)
       .then(url => {
@@ -248,14 +248,14 @@ class App extends React.Component {
         <div className='parent'>
           <div className='container stats'>
             <div className='row'>
-              <div className='col-1'>
+              <div className='col-sm'>
                 <img src={this.state.tsugu} alt='' height={'75px'} />
               </div>
-              <div className='col-8 total'>
+              <div className='col total'>
                 <div>Total: {this.state.total} ({this.state.focus2 + this.state.focus3 + this.state.focus4})</div>
                 <div>Stars spent: {(this.state.total) * 250}&#160;{this.state.whale}</div>
               </div>
-              <div className='individual' onMouseEnter={this.handleHoverIn} onMouseLeave={this.handleHoverOut}>
+              <div className='col individual' onMouseEnter={this.handleHoverIn} onMouseLeave={this.handleHoverOut}>
                 <div>4☆: {Math.round(this.state.four * 100) / 100} ({this.state.focus4})</div>
                 <div>3☆: {Math.round(this.state.three * 100) / 100} ({this.state.focus3})</div>
                 <div>2☆: {Math.round(this.state.two * 100) / 100} ({this.state.focus2})</div>
@@ -263,11 +263,13 @@ class App extends React.Component {
             </div>
           </div>
 
-          <div className='results'>{this.state.q}</div>
+          <div className='container'>
+            <div className='results'>{this.state.q}</div>
+          </div>
 
           <div className='container gacha'>
             <div className='row'>
-              <div className='col gachabanner'>
+              <div className='col-sm gachabanner'>
                 <a href={'https://bestdori.com/info/gacha/' + this.state.selectedGacha} target='_blank' rel="noopener noreferrer">
                   <img src={this.state.gachaimg} alt='' height='100px' />
                 </a>
@@ -288,7 +290,7 @@ class App extends React.Component {
             </div>
           </div>
 
-          <div className='controls'>
+          <div className='container controls'>
             <div className="custom-switch dreamfes">
               <input type="checkbox" className="custom-control-input" id="defaultUnchecked" onClick={this.handleDF}/>
               <label className="custom-control-label unselectable" htmlFor="defaultUnchecked">DreamFes</label>
