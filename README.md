@@ -3,6 +3,7 @@ Contact:
 (Reddit) /u/sowoneul  
 
 TODO:
-1. Allow spam click rolling
-2. Better mobile support
-3. Add suitable feedback/ideas
+1. Morfonica
+2. Allow spam click rolling
+3. Better mobile support
+4. Add suitable feedback/ideas
