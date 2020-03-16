@@ -244,14 +244,14 @@ class App extends React.Component {
   
   render() {
     return (
-      <div className={"App " + this.state.dark}>
+      <div className={"App"}>
         <div className='parent'>
           <div className='container stats'>
             <div className='row'>
               <div className='col-sm'>
                 <img src={this.state.tsugu} alt='' height={'75px'} />
               </div>
-              <div className='col total'>
+              <div className='col-5 total'>
                 <div>Total: {this.state.total} ({this.state.focus2 + this.state.focus3 + this.state.focus4})</div>
                 <div>Stars spent: {(this.state.total) * 250}&#160;{this.state.whale}</div>
               </div>

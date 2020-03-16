@@ -54,7 +54,7 @@
     width: 100% !important;
   }
   .total {
-    font-size: 1.25em !important;
+    font-size: 1.15em !important;
   }
   .individual {
     font-size: 1em !important;
@@ -74,7 +74,7 @@
     width: 13.5vw !important;
   }
 
-  .thumb-band-1, .thumb-band-2, .thumb-band-3, .thumb-band-4, .thumb-band-5,
+  .thumb-band-1, .thumb-band-2, .thumb-band-3, .thumb-band-4, .thumb-band-5, .thumb-band-6,
   .thumb-attr-pure, .thumb-attr-cool, .thumb-attr-powerful, .thumb-attr-happy {
     width: 3.375vw !important;
     height: 3.375vw !important;
@@ -95,7 +95,7 @@
 }
 
 .total {
-  font-size: 1.6em;
+  font-size: 1.5em;
   text-align: center;
   /*padding-left: 75px;*/
   margin-top: auto;
@@ -310,6 +310,17 @@
   width: 25px;
   height: 25px;
   background: url('./img/band_icon_5.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.thumb-band-6 {
+  position: absolute;
+  top: 1.5%;
+  left: 2%;
+  width: 25px;
+  height: 25px;
+  background: url('./img/band_icon_6.png');
   background-size: contain;
   background-repeat: no-repeat;
 }
