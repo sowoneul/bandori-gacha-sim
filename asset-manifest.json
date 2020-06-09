@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/bandori-gacha-sim/static/css/main.46a6ca46.chunk.css",
+    "main.css": "/bandori-gacha-sim/static/css/main.52ec9ebe.chunk.css",
     "main.js": "/bandori-gacha-sim/static/js/main.a8a0656d.chunk.js",
     "main.js.map": "/bandori-gacha-sim/static/js/main.a8a0656d.chunk.js.map",
     "runtime-main.js": "/bandori-gacha-sim/static/js/runtime-main.30dd1ea4.js",
@@ -8,9 +8,9 @@
     "static/js/2.1f7897e9.chunk.js": "/bandori-gacha-sim/static/js/2.1f7897e9.chunk.js",
     "static/js/2.1f7897e9.chunk.js.map": "/bandori-gacha-sim/static/js/2.1f7897e9.chunk.js.map",
     "index.html": "/bandori-gacha-sim/index.html",
-    "precache-manifest.232f62b95530fa3d269e053719c9d07f.js": "/bandori-gacha-sim/precache-manifest.232f62b95530fa3d269e053719c9d07f.js",
+    "precache-manifest.1ff9b8fe97771231a13b134a61f3c731.js": "/bandori-gacha-sim/precache-manifest.1ff9b8fe97771231a13b134a61f3c731.js",
     "service-worker.js": "/bandori-gacha-sim/service-worker.js",
-    "static/css/main.46a6ca46.chunk.css.map": "/bandori-gacha-sim/static/css/main.46a6ca46.chunk.css.map",
+    "static/css/main.52ec9ebe.chunk.css.map": "/bandori-gacha-sim/static/css/main.52ec9ebe.chunk.css.map",
     "static/js/2.1f7897e9.chunk.js.LICENSE.txt": "/bandori-gacha-sim/static/js/2.1f7897e9.chunk.js.LICENSE.txt",
     "static/media/tsugumoney.gif": "/bandori-gacha-sim/static/media/tsugumoney.0eee08a4.gif",
     "static/media/tsugunomoney.gif": "/bandori-gacha-sim/static/media/tsugunomoney.a698363a.gif",
@@ -19,7 +19,7 @@
   "entrypoints": [
     "static/js/runtime-main.30dd1ea4.js",
     "static/js/2.1f7897e9.chunk.js",
-    "static/css/main.46a6ca46.chunk.css",
+    "static/css/main.52ec9ebe.chunk.css",
     "static/js/main.a8a0656d.chunk.js"
   ]
 }
