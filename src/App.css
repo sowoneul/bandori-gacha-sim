@@ -326,6 +326,17 @@
   background-repeat: no-repeat;
 }
 
+.thumb-band-7 {
+  position: absolute;
+  top: 1.5%;
+  left: 2%;
+  width: 25px;
+  height: 25px;
+  background: url('./img/band_icon_7.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 .thumb-attr-pure {
   position: absolute;
   top: 1.5%;
