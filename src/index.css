@@ -9,6 +9,14 @@ body {
   color: #dcdcdc;
 }
 
+a {
+  color: #FF3377;
+}
+
+a:hover {
+  color: #f03070;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -27,13 +35,42 @@ code {
 		top: 5px !important;
 		right: 5px !important;
 	}
+
+  #home {
+    top: 10px !important;
+    left: 10px !important;
+  }
+
+  .homeIcon {
+    height: 25px !important;
+  }
+}
+
+#home {
+  position: absolute;
+  top: 20px;
+  left: 25px;
+  height: 30px;
+  width: 30px;
+  opacity: 0.9;
+  transition: 0.2s;
+}
+
+#home:hover {
+  opacity: 0.8;
+  transition: 0.2s;
+  transform: scale(1.075);
+}
+
+.homeIcon {
+  height: 30px;
 }
 
 #credits {
   position: fixed;
   bottom: 3px;
   right: 5px;
-  font-size: 0.75em;
+  font-size: 1em;
   text-align: right;
 }
 
@@ -51,4 +88,9 @@ code {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+.discordInfo {
+  background-color: #262626 !important;
+  margin: 5px 0px -16px 10px;
 }
