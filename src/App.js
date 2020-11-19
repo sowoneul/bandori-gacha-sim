@@ -42,7 +42,7 @@ class App extends React.Component {
 
   getGachaList = (region) => {
     // build gacha dropdown list
-    fetch('https://api.bandori.ga/v1/' + region + '/gacha')
+    fetch('https://api.bandori.top/v2/' + region + '/gacha')
       .then((response) => {
         return response.json();
       })
